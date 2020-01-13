@@ -83,7 +83,7 @@
             border: 1px solid grey;
             min-width: 150px;
         }
-        li:hover {
+        .list > li:hover {
             border-left: 3px solid #DC2222;
             /*border-right: 3px solid #DC2222*/;
             transform: scale(1.01);
@@ -116,15 +116,47 @@
         .main-center-block__main {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             height: 40vh;
             border-top: 2px solid #404040;
             border-bottom: 2px solid #404040;
             margin: 15px 0 15px 45px;
         }
+
+
+
+
+        .main-center-block__main-left-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 45%;
+            border: 1px solid black;
+            margin: 5px 0;
+        }
+
+        .main-center-block__main-right-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 45%;
+            border: 1px solid black;
+            margin: 5px 0;
+        }
+
+
+
+
+
+
+
         .main-center-block__footer {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 5px;
         }
         .main-center-block__footer > button {
             padding: 7px 35px;
@@ -175,7 +207,12 @@
                     <p>Настройки</p>
                 </div>
                 <div class="main-center-block__main">
+                    <div class="main-center-block__main-left-block">
+                        
+                    </div>
+                    <div class="main-center-block__main-right-block">
 
+                    </div>
                 </div>
                 <div class="main-center-block__footer">
                     <button>Сохранить</button>
