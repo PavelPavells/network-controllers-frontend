@@ -4,27 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 10vh;
+            background-color: #404040;
+        }
+        .left-block {
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+        }
+        .right-block {
+            font-size: 20px;
+            font-weight: 100;
+            color: white;
+        }
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /*flex-wrap: wrap;*/
+            width: 100%;
+            height: 90vh;
+            padding: 0;
+            margin: 0;
+            border: 1px solid black;
+        }
+        .main-left-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 20%;
+            min-width: 200px;
+            padding: 8px;
+        }
+        .list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            list-style: none;
+            padding-inline-start: 0px;
+            margin-block-start: 0px;
+            min-width: 150px;
+        }
+        .list > li {
+            width: 100%;
+            margin-top: 2px;
+            /*
+            margin-right: 2px;
+            padding: 3px; */
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid grey;
+            min-width: 150px;
+        }
+        .main-center-block {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+            border: 1px solid black;
+            min-width: 430px;
+        }
+        .main-right-block {
+            display: flex;
+            width: 30%;
+            padding: 8px;
+            /*border: 1px solid black;*/
+        }
+    </style>
     <title>dhcp</title>
 </head>
-<body style="margin:0;padding:0;">
-    <div class="w" style="display:block;height:100vh;width:100%;">
-        <header class="h" style="display:inline-block;vertical-align:middle;background-color:#DC2222;height:10vh;border:1px solid lightgrey;width:100%;line-height:100%;">
-            <div class="lb" style="display:inline-block;vertical-align:middle;margin-top:2.3%;margin-left:30px;width:45%;color:white;padding:0px;font-size:35px;font-weight:400;text-align:left;">
-                CARDDEX
-            </div>
-            <div class="rb" style="display:inline-block;vertical-align:middle;margin-top:2.3%;margin-right:30px;width:50%;color:white;padding:0px;font-size:25px;font-weight:400;text-align:right;">
-                Универсальный сетевой контроллер CDX-01
-            </div>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="left-block">CARDDEX</div>
+            <div class="right-block">Универсальный сетевой контроллер CDX-01</div>
         </header>
-        <main class="m">
-            <div class="mlb">
-
+        <main class="main">
+            <div class="main-left-block">
+                <ul class="list">
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                    <li>Настройки</li>
+                </ul>
             </div>
-            <div class="mcb">
+            <div class="main-center-block">
 
+                test
+                <div class="main-center-block__header">
+
+                </div>
+                <div class="main-center-block__main">
+
+                </div>
+                <div class="main-center-block__footer">
+                    <button>Сохранить</button>
+                </div>
             </div>
-            <div class="mrb">
-
+            <div class="main-right-block">
+                <p>
+                    "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+                    No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. 
+                    To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? 
+                    But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+                </p>
             </div>
         </main>
     </div>
