@@ -44,7 +44,6 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            /*flex-wrap: wrap;*/
             width: 100%;
             height: 90vh;
             padding: 0;
@@ -74,10 +73,8 @@
         .list > li {
             width: 100%;
             margin-top: 2px;
-            /*
-            margin-right: 2px;
-            padding: 3px; */
-            font-size: 18px;
+            padding: 8px 0; 
+            font-size: 17px;
             font-weight: 100;
             text-align: center;
             border: 1px solid grey;
@@ -85,8 +82,8 @@
         }
         .list > li:hover {
             border-left: 3px solid #DC2222;
-            /*border-right: 3px solid #DC2222*/;
             transform: scale(1.01);
+            cursor: pointer;
         }
         .main-center-block {
             display: flex;
@@ -98,7 +95,6 @@
         .main-right-block {
             width: 30%;
             padding: 8px;
-            /*border: 1px solid black;*/
             min-width: 300px;
             margin-top: 17px;
         }
@@ -117,41 +113,38 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            height: 40vh;
+            height: 30vh;
+            min-height: 260px;
             border-top: 2px solid #404040;
             border-bottom: 2px solid #404040;
             margin: 15px 0 15px 45px;
         }
-
-
-
-
         .main-center-block__main-left-block {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            width: 45%;
-            border: 1px solid black;
+            align-items: flex-end;
+            width: 47%;
             margin: 5px 0;
         }
-
+        .description {
+            margin-bottom: 20px;
+            padding: 4px;
+        }
         .main-center-block__main-right-block {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            width: 45%;
-            border: 1px solid black;
+            align-items: flex-start;
+            width: 47%;
             margin: 5px 0;
         }
-
-
-
-
-
-
-
+        .input {
+            width: 80%;
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+            padding: 5px;
+        }
         .main-center-block__footer {
             display: flex;
             justify-content: center;
@@ -166,6 +159,7 @@
             color: black;
             font-size: 15px;
             border: 1px solid #404040;
+            outline: none;
         }
         .main-center-block__footer > button:hover {
             background-color: #DC2222;
@@ -175,7 +169,7 @@
             cursor: pointer;
         }
     </style>
-    <title>dhcp</title>
+    <title>DHCP</title>
 </head>
 <body>
     <div class="wrapper">
@@ -186,37 +180,45 @@
         <main class="main">
             <div class="main-left-block">
                 <ul class="list">
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
-                    <li>Настройки</li>
+                    <li>Состояние</li>
+                    <li>Быстрая настройка</li>
+                    <li>WPS</li>
+                    <li>Сеть</li>
+                    <li>DHCP</li>
+                    <li>Переадресация</li>
+                    <li>Безопасность</li>
+                    <li>Контроль доступа</li>
+                    <li>Динамический DNS</li>
+                    <li>Привязка IP и MAC адресов</li>
+                    <li>Динамический DNS</li>
+                    <li>Системные инструменты</li>
                 </ul>
             </div>
             <div class="main-center-block">
-                <div class="main-center-block__header">
-                    <p>Настройки</p>
-                </div>
-                <div class="main-center-block__main">
-                    <div class="main-center-block__main-left-block">
-                        
+                <form action="action.js" method="POST" onsubmit="alert('SEND!!!');return false" enctype="multipart/form-data">
+                    <div class="main-center-block__header">
+                        <p>Настройки</p>
                     </div>
-                    <div class="main-center-block__main-right-block">
-
+                    <div class="main-center-block__main">
+                        <div class="main-center-block__main-left-block">
+                            <div class="description">Начальный IP адрес:</div>
+                            <div class="description">Конечный IP адрес:</div>
+                            <div class="description">Основной шлюз:</div>
+                            <div class="description">Первичный DNS:</div>
+                            <div class="description">Вторичный DNS:</div>
+                        </div>
+                        <div class="main-center-block__main-right-block">
+                            <input class="input" type="text" alt="" placeholder="Введите информацию" />
+                            <input class="input" type="text" alt="" placeholder="Введите информацию" />
+                            <input class="input" type="text" alt="" placeholder="Введите информацию" />
+                            <input class="input" type="text" alt="" placeholder="Необязательно" />
+                            <input class="input" type="text" alt="" placeholder="Необязательно" />
+                        </div>
                     </div>
-                </div>
-                <div class="main-center-block__footer">
-                    <button>Сохранить</button>
-                </div>
+                    <div onclick="alert('SUBMITTING!!!')" class="main-center-block__footer">
+                        <button>Сохранить</button>
+                    </div>
+                </form>
             </div>
             <div class="main-right-block">
                 <h3>Справка: Настройка</h3>
