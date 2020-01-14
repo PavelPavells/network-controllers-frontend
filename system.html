@@ -146,6 +146,25 @@
             border: 1px solid lightgray;
             padding: 5px;
         }
+        .input-option {
+            width: 82.5%;
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+            padding: 5px;
+        }
+        .wrapper-option-day {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 83%;
+        }
+        select {
+            font-size: 10px;
+        }
+        option {
+            font-size: 12px;
+        }
         /*.checkbox {
             display: flex;
             flex-direction: row;
@@ -219,6 +238,8 @@
                             <div class="description">Часы:</div>
                             <div class="description">Минуты:</div>
                             <div class="description">Секунды:</div>
+                            <div class="description">Начало:</div>
+                            <div class="description">Конец:</div>
                         </div>
                         <div class="main-center-block__main-right-block">
                             <!--
@@ -227,7 +248,7 @@
                                 <input type="checkbox" type="text">
                             </div>
                             -->
-                            <select class="input" name="timezone" id="timezone">
+                            <select class="input-option" name="timezone" id="timezone">
                                 <option value="-12.0">(GMT -12:00) Эниветок, Кваджалейн</option>
                                 <option value="-11.0">(GMT -11:00) Остров Мидуэй, Самоа</option>
                                 <option value="-10.0">(GMT -10:00) Гавайи</option>
@@ -266,6 +287,64 @@
                             <input class="input" type="text" alt="" placeholder="Введите часы" />
                             <input class="input" type="text" alt="" placeholder="Введите минуты" />
                             <input class="input" type="text" alt="" placeholder="Введите секунды" />
+                            <div class="wrapper-option-day">
+                                <select class="input" name="start" id="timezone">
+                                    <option value="понедельник">Понедельник</option>
+                                    <option value="вторник">Вторник</option>
+                                    <option value="среда">Среда</option>
+                                    <option value="четверг">Четверг</option>
+                                    <option value="пятница">Пятница</option>
+                                    <option value="суббота">Суббота</option>
+                                    <option value="воскресенье">Воскресенье</option>
+                                </select>
+                                <select class="input" name="start" id="timezone">
+                                    <option value="первый">Первый</option>
+                                    <option value="последний">Последний</option>
+                                </select>
+                                <select class="input" name="start" id="timezone">
+                                    <option value="январь">Понедельник</option>
+                                    <option value="февраль">Вторник</option>
+                                    <option value="март">Среда</option>
+                                    <option value="апрель">Четверг</option>
+                                    <option value="май">Пятница</option>
+                                    <option value="июнь">Суббота</option>
+                                    <option value="июль">Воскресенье</option>
+                                    <option value="август">Воскресенье</option>
+                                    <option value="сентябрь">Воскресенье</option>
+                                    <option value="октябрь">Воскресенье</option>
+                                    <option value="ноябрь">Воскресенье</option>
+                                    <option value="декабрь">Воскресенье</option>
+                                </select>
+                            </div>
+                            <div class="wrapper-option-day">
+                                <select class="input" name="end" id="timezone">
+                                    <option value="понедельник">Понедельник</option>
+                                    <option value="вторник">Вторник</option>
+                                    <option value="среда">Среда</option>
+                                    <option value="четверг">Четверг</option>
+                                    <option value="пятница">Пятница</option>
+                                    <option value="суббота">Суббота</option>
+                                    <option value="воскресенье">Воскресенье</option>
+                                </select>
+                                <select class="input" name="start" id="timezone">
+                                    <option value="первый">Первый</option>
+                                    <option value="последний">Последний</option>
+                                </select>
+                                <select class="input" name="start" id="timezone">
+                                    <option value="январь">Понедельник</option>
+                                    <option value="февраль">Вторник</option>
+                                    <option value="март">Среда</option>
+                                    <option value="апрель">Четверг</option>
+                                    <option value="май">Пятница</option>
+                                    <option value="июнь">Суббота</option>
+                                    <option value="июль">Воскресенье</option>
+                                    <option value="август">Воскресенье</option>
+                                    <option value="сентябрь">Воскресенье</option>
+                                    <option value="октябрь">Воскресенье</option>
+                                    <option value="ноябрь">Воскресенье</option>
+                                    <option value="декабрь">Воскресенье</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div onclick="alert('SUBMITTING!!!')" class="main-center-block__footer">
@@ -274,7 +353,7 @@
                 </form>
             </div>
             <div class="main-right-block">
-                <h3>Справка: Настройка</h3>
+                <h3>Справка: Настройка времени</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
