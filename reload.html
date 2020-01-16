@@ -24,7 +24,7 @@
         .header {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             height: 10vh;
@@ -33,11 +33,13 @@
         .left-block {
             font-size: 40px;
             font-weight: 600;
+            padding-left: 4%;
             color: #ffffff;
         }
         .right-block {
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 100;
+            margin-right: 2.5%;
             color: #ffffff;
         }
         .main {
@@ -235,6 +237,15 @@
             border: 1px solid #ffffff;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
+        }
+        @media (min-width: 1920px) {
+            .left-block {
+                padding-left: 5.5%;
+            }
+            .right-block {
+                margin-right: 3%;
+                font-size: 20px;
+            }
         }
     </style>
     <title>Reload</title>

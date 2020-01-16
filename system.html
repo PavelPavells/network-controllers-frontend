@@ -37,9 +37,9 @@
             color: #ffffff;
         }
         .right-block {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 100;
-            padding-right: 2%;
+            margin-right: 2.5%;
             color: #ffffff;
         }
         .main {
@@ -204,17 +204,21 @@
             transition: all 0.2s ease-in-out;
             cursor: pointer;
         }
-        @media (max-width: 1366px) {
-            .left-block {
-                padding-left: 4%;
-            }   
-        }
-        @media (max-width: 1920px) {
+        /* @media (max-width: 1366) {
             .left-block {
                 padding-left: 5.5%;
             }
             .right-block {
                 padding-right: 4%;
+                font-size: 16px;
+            }
+        } */
+        @media (min-width: 1920px) {
+            .left-block {
+                padding-left: 5.5%;
+            }
+            .right-block {
+                margin-right: 3%;
                 font-size: 20px;
             }
         }
