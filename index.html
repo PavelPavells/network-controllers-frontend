@@ -91,8 +91,8 @@
             display: flex;
             flex-direction: column;
             width: 48%;
-            border-left: 1px solid #000000;
-            border-right: 1px solid #000000;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
             min-width: 430px;
         }
         .main-right-block {
@@ -100,6 +100,7 @@
             padding: 8px;
             min-width: 300px;
             margin-top: 17px;
+            overflow-y: scroll;
         }
         .main-center-block__header {
             margin-left: 45px;
@@ -116,13 +117,13 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            height: 30vh;
-            min-height: 260px;
+            height: 15vh;
+            /* min-height: 260px; */
             border-top: 2px solid #404040;
             border-bottom: 2px solid #404040;
             margin: 15px 0 15px 45px;
         }
-        .main-center-block__main-left-block {
+         .main-center-block__main-left-block {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -131,7 +132,7 @@
             margin: 5px 0;
         }
         .description {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             padding: 4px;
         }
         .main-center-block__main-right-block {
@@ -142,43 +143,89 @@
             width: 50%;
             margin: 5px 0;
         }
-        .input {
+        .text {
             width: 80%;
-            margin-bottom: 20px;
-            border: 1px solid lightgray;
+            margin-bottom: 15px;
             padding: 5px;
         }
-        /*.checkbox {
+        .main-center-block__main-two {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            height: 20vh;
+            /* min-height: 260px; */
+            /* border-top: 2px solid #404040; */
+            border-bottom: 2px solid #404040;
+            margin: 0px 0 15px 45px;
+        }
+         .main-center-block__main-left-block-two {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 43%;
+            margin: 5px 0;
+        }
+        .description-two {
+            margin-bottom: 15px;
+            padding: 4px;
+        }
+        .main-center-block__main-right-block-two {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: flex-start;
-        }*/
+            width: 50%;
+            margin: 5px 0;
+        }
+        .text-two {
+            width: 80%;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+        .main-center-block__main-three {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 25vh;
+            /* min-height: 260px; */
+            /* border-top: 2px solid #404040; */
+            border-bottom: 2px solid #404040;
+            margin: 0px 0 15px 45px;
+        }
+         .main-center-block__main-left-block-three {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 43%;
+            margin: 5px 0;
+        }
+        .description-three {
+            margin-bottom: 17px;
+            padding: 4px;
+        }
+        .main-center-block__main-right-block-three {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 50%;
+            margin: 5px 0;
+        }
+        .text-three {
+            width: 80%;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
         .main-center-block__footer {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 5px;
         }
-        .main-center-block__footer > button {
-            padding: 7px 35px;
-            border-radius: 5px;
-            color: #ffffff;
-            background-color: #ffffff;
-            color: #000000;
-            font-size: 15px;
-            border: 1px solid #404040;
-            outline: none;
-        }
-        .main-center-block__footer > button:hover {
-            background-color: #DC2222;
-            color: #ffffff;
-            border: 1px solid #ffffff;
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-        }
     </style>
-    <title>DHCP</title>
+    <title>Main</title>
 </head>
 <body>
     <div class="wrapper">
@@ -199,40 +246,48 @@
                 </ul>
             </div>
             <div class="main-center-block">
-                <form action="/submit_form"
-                    method="POST"
-                    onsubmit="alert('SEND!!!');return false"
-                    enctype="multipart/form-data"
-                    autocomplete="on">
-                    <div class="main-center-block__header">
-                        <p>Настройки</p>
+                <div class="main-center-block__header">
+                    <p>Состояние</p>
+                </div>
+                <div class="main-center-block__main">
+                    <div class="main-center-block__main-left-block">
+                        <div class="description">Версия встроенного ПО:</div>
+                        <div class="description">Версия оборудования:</div>
                     </div>
-                    <div class="main-center-block__main">
-                        <div class="main-center-block__main-left-block">
-                            <div class="description">Начальный IP адрес:</div>
-                            <div class="description">Конечный IP адрес:</div>
-                            <div class="description">Основной шлюз:</div>
-                            <div class="description">Первичный DNS:</div>
-                            <div class="description">Вторичный DNS:</div>
-                        </div>
-                        <div class="main-center-block__main-right-block">
-                            <!--
-                            <div class="checkbox">
-                                <input type="checkbox" type="text">
-                                <input type="checkbox" type="text">
-                            </div>
-                            -->
-                            <input class="input" type="text" alt="" placeholder="Введите информацию" />
-                            <input class="input" type="text" alt="" placeholder="Введите информацию" />
-                            <input class="input" type="text" alt="" placeholder="Введите информацию" />
-                            <input class="input" type="text" alt="" placeholder="Необязательно" />
-                            <input class="input" type="text" alt="" placeholder="Необязательно" />
-                        </div>
+                    <div class="main-center-block__main-right-block">
+                        <div class="text">WFPOIJNPONJ453BNP</div>
+                        <div class="text">JBIPJBN654BN54N</div>
                     </div>
-                    <div onclick="alert('SUBMITTING!!!')" class="main-center-block__footer">
-                        <button>Сохранить</button>
+                </div>
+
+                <div class="main-center-block__main-two">
+                    <div class="main-center-block__main-left-block-two">
+                        <div class="description-two">MAC - адрес:</div>
+                        <div class="description-two">IP - адрес:</div>
+                        <div class="description-two">Маска подсети:</div>
                     </div>
-                </form>
+                    <div class="main-center-block__main-right-block-two">
+                        <div class="text-two">00:00:00:00:00</div>
+                        <div class="text-two">172.172.172.172</div>
+                        <div class="text-two">0.0.0.0</div>
+                    </div>
+                </div>
+
+                <div class="main-center-block__main-three">
+                    <div class="main-center-block__main-left-block-three">
+                        <div class="description-three">Беспроводное вещание:</div>
+                        <div class="description-three">Имя беспрводной сети:</div>
+                        <div class="description-three">Режим:</div>
+                        <div class="description-three">Ширина канала:</div>
+                    </div>
+                    <div class="main-center-block__main-right-block-three">
+                        <div class="text-three">Включено</div>
+                        <div class="text-three">CARDDEX_45BDF3</div>
+                        <div class="text-three">11bgn Смешанный</div>
+                        <div class="text-three">Автоматический</div>
+                    </div>
+                </div>
+
             </div>
             <div class="main-right-block">
                 <h3>Справка: Настройка</h3>
@@ -240,6 +295,18 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>

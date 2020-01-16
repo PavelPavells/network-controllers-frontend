@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> -->
     <style>
         html {
             overflow: hidden;
@@ -33,13 +33,13 @@
         .left-block {
             font-size: 40px;
             font-weight: 600;
-            padding-left: 4%;
+            padding-left: 1%;
             color: #ffffff;
         }
         .right-block {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 100;
-            margin-right: 2.5%;
+            padding-right: 1%;
             color: #ffffff;
         }
         .main {
@@ -75,7 +75,7 @@
         .list > li {
             width: 100%;
             margin-top: 2px;
-            padding: 8px 0; 
+            padding: 8px 0;
             font-size: 17px;
             font-weight: 100;
             text-align: center;
@@ -238,15 +238,6 @@
             transition: all 0.2s ease-in-out;
             cursor: pointer;
         }
-        @media (min-width: 1920px) {
-            .left-block {
-                padding-left: 5.5%;
-            }
-            .right-block {
-                margin-right: 3%;
-                font-size: 20px;
-            }
-        }
     </style>
     <title>Reload</title>
 </head>
@@ -259,18 +250,13 @@
         <main class="main">
             <div class="main-left-block">
                 <ul class="list">
-                    <li>Состояние</li>
-                    <li>Быстрая настройка</li>
-                    <li>WPS</li>
-                    <li>Сеть</li>
-                    <li>DHCP</li>
-                    <li>Переадресация</li>
+                    <li onclick="location.href='index.html';" style="cursor:pointer;">Состояние</li>
+                    <li onclick="location.href='system.html';" style="cursor:pointer;">Настройки даты и времени</li>
+                    <li onclick="location.href='dhcp.html';" style="cursor:pointer;">DHCP</li>
                     <li>Безопасность</li>
                     <li>Контроль доступа</li>
-                    <li>Динамический DNS</li>
                     <li>Привязка IP и MAC адресов</li>
-                    <li>Динамический DNS</li>
-                    <li>Системные инструменты</li>
+                    <li onclick="location.href='reload.html';" style="cursor:pointer;">Системные инструменты</li>
                 </ul>
             </div>
             <div class="main-center-block">
@@ -278,7 +264,7 @@
                     <p>Перезагрузка</p>
                 </div>
                 <div class="main-center-block__main">
-                    
+
                 </div>
                 <div onclick="alert('SUBMITTING!!!')" class="main-center-block__footer">
                     <button>Перезагрузить</button>
